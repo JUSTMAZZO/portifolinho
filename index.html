@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Guilherme Emanuel Ferreira Ferraz — Engenheiro de Controle e Automação, especialista em soluções AgTech & EdTech." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>GEFF // Terminal v4.7 — Portfolio System</title>
+
+  <!-- ══════════════════════════════════════════════
+       WEBFONTS
+       - "Press Start 2P" → Logo / Name (pixel-art impact, evokes Pricedown/GTA)
+       - "Share Tech Mono" → Section titles (geometric, Overseer-like)
+       - "Fira Code" → Body / terminal text (monospace retro)
+       ══════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=Fira+Code:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ╔══════════════════════════════════════════════╗
+       ║  CRT OVERLAY — scanlines + vignette          ║
+       ╚══════════════════════════════════════════════╝ -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <div class="crt-vignette" aria-hidden="true"></div>
+
+  <!-- ╔══════════════════════════════════════════════╗
+       ║  BOOT SEQUENCE SCREEN                        ║
+       ╚══════════════════════════════════════════════╝ -->
+  <div id="boot-screen" class="boot-screen" aria-label="Tela de inicialização do sistema">
+    <div class="boot-log" id="boot-log"></div>
+    <div class="boot-progress">
+      <div class="boot-progress-bar" id="boot-progress-bar"></div>
+    </div>
+    <p class="boot-status" id="boot-status">INICIALIZANDO KERNEL...</p>
+  </div>
+
+  <!-- ╔══════════════════════════════════════════════╗
+       ║  MAIN CONTENT (hidden until boot completes)  ║
+       ╚══════════════════════════════════════════════╝ -->
+  <main id="main-content" class="main-content" style="display: none;">
+
+    <!-- ─── HERO SECTION ─── -->
+    <section id="hero" class="hero-section">
+      <div class="hero-inner">
+        <p class="hero-prefix">&gt; SYSTEM.USER.IDENTIFY()</p>
+        <h1 class="hero-name" id="hero-name" aria-label="Guilherme Emanuel Ferreira Ferraz"></h1>
+        <div class="hero-cursor" id="hero-cursor">_</div>
+        <p class="hero-subtitle" id="hero-subtitle"></p>
+        <div class="hero-divider"></div>
+        <p class="hero-status">
+          <span class="status-dot"></span> STATUS: <span class="text-green">ONLINE</span> — READY FOR DEPLOYMENT
+        </p>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>▼ SCROLL ▼</span>
+      </div>
+    </section>
+
+    <!-- ─── SOBRE MIM — TERMINAL ─── -->
+    <section id="about" class="section about-section">
+      <h2 class="section-title">
+        <span class="section-prefix">[01]</span> SOBRE_MIM.log
+      </h2>
+      <div class="terminal-box">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">geff@portfolio:~$ cat about.txt</span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-prompt">
+            <span class="prompt-symbol">&gt;</span>
+            Uso a tecnologia como motor de evolução social, criando soluções AgTech e apoiando pessoas vulneráveis. Criei minha empresa e atuo na Secretaria de Educação de MT com um propósito claro: aplicar meu conhecimento técnico para auxiliar ativamente no desenvolvimento dos alunos do estado.
+          </p>
+          <div class="tech-stack">
+            <span class="prompt-symbol">&gt;</span>
+            <span class="stack-label">STACK.load() →</span>
+            <span class="stack-tag blink-tag" style="--delay: 0s">Python</span>
+            <span class="stack-tag blink-tag" style="--delay: 0.2s">JavaScript</span>
+            <span class="stack-tag blink-tag" style="--delay: 0.4s">C/C++</span>
+            <span class="stack-tag blink-tag" style="--delay: 0.6s">Apps Script</span>
+            <span class="stack-tag blink-tag" style="--delay: 0.8s">Firebase</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PROJETOS — ARQUIVOS CONFIDENCIAIS ─── -->
+    <section id="projects" class="section projects-section">
+      <h2 class="section-title">
+        <span class="section-prefix">[02]</span> ARQUIVOS_CONFIDENCIAIS/
+      </h2>
+      <p class="section-desc">
+        <span class="prompt-symbol">&gt;</span> ACESSO NÍVEL 4 CONCEDIDO — Exibindo registros de missão...
+      </p>
+
+      <div class="projects-grid">
+
+        <!-- Card 1 -->
+        <article class="project-card" data-status="ATIVO">
+          <div class="card-header">
+            <span class="card-id">FILE_001</span>
+            <span class="card-status active">● ATIVO</span>
+          </div>
+          <h3 class="card-title">Play2Learn</h3>
+          <p class="card-role">CEO & Cofundador — Startup de Software Educacional</p>
+          <p class="card-desc">
+            Plataforma de gamificação educacional projetada para maximizar o engajamento e o impacto pedagógico. Liderança completa do produto: da concepção à arquitetura técnica.
+          </p>
+          <div class="card-tags">
+            <span>EdTech</span><span>Gamificação</span><span>Startup</span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project-card" data-status="OPERACIONAL">
+          <div class="card-header">
+            <span class="card-id">FILE_002</span>
+            <span class="card-status operational">● OPERACIONAL</span>
+          </div>
+          <h3 class="card-title">Automação Seduc</h3>
+          <p class="card-role">Engenheiro de Software — Secretaria de Educação / MT</p>
+          <p class="card-desc">
+            Desenvolvimento de aplicações web integradas com Google Apps Script e Python para otimização radical de fluxo operacional e gestão escolar estadual.
+          </p>
+          <div class="card-tags">
+            <span>Apps Script</span><span>Python</span><span>Automação</span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project-card" data-status="CONCLUÍDO">
+          <div class="card-header">
+            <span class="card-id">FILE_003</span>
+            <span class="card-status completed">● CONCLUÍDO</span>
+          </div>
+          <h3 class="card-title">Solo Fácil</h3>
+          <p class="card-role">Hackathon Winner — Ecossistema IoT</p>
+          <p class="card-desc">
+            Ecossistema completo (Hardware + Aplicativo) para análise de solo na agricultura familiar. Solução premiada por sua inovação e impacto social direto.
+          </p>
+          <div class="card-tags">
+            <span>IoT</span><span>AgTech</span><span>Hardware</span>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="project-card" data-status="PESQUISA">
+          <div class="card-header">
+            <span class="card-id">FILE_004</span>
+            <span class="card-status research">● PESQUISA</span>
+          </div>
+          <h3 class="card-title">Visão Computacional AgTech</h3>
+          <p class="card-role">Pesquisador — IA Aplicada à Agropecuária</p>
+          <p class="card-desc">
+            Projeto de pesquisa para predição e análise de peso de suínos utilizando modelos de IA (YOLO) e processamento avançado de imagens em tempo real. Hardware de captura: Intel RealSense (câmera de profundidade).
+          </p>
+          <div class="card-tags">
+            <span>YOLO</span><span>Computer Vision</span><span>IA</span>
+          </div>
+        </article>
+
+        <!-- Card 5 — ACHIEVEMENT UNLOCKED -->
+        <article class="project-card project-card--achievement" data-status="IMPACTO">
+          <div class="achievement-banner">
+            <span class="achievement-icon">🏆</span>
+            <span class="achievement-text">ACHIEVEMENT UNLOCKED</span>
+          </div>
+          <div class="card-header">
+            <span class="card-id">FILE_005</span>
+            <span class="card-status impact">● IMPACTO SOCIAL</span>
+          </div>
+          <h3 class="card-title">Adventure Quest</h3>
+          <p class="card-role">Hackathon Hacker Hero — Jogo Educacional</p>
+          <p class="card-desc">
+            Jogo gamificado com foco em segurança e educação digital infantil contra abusos virtuais. Projeto voltado à proteção de crianças no ambiente online.
+          </p>
+          <div class="achievement-louvor">
+            <span class="louvor-icon">★</span>
+            <span class="louvor-text">MOÇÃO DE LOUVOR — Poder Legislativo</span>
+            <p class="louvor-desc">Reconhecimento oficial pelo alto impacto social e preventivo do projeto.</p>
+          </div>
+          <div class="card-tags">
+            <span>Gamificação</span><span>Segurança Digital</span><span>Impacto Social</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ─── TRANSMISSÕES & FREQUÊNCIAS ABERTAS ─── -->
+    <section id="broadcast" class="section broadcast-section">
+      <h2 class="section-title">
+        <span class="section-prefix">[03]</span> TRANSMISSÕES_&_FREQUÊNCIAS/
+      </h2>
+      <p class="section-desc">
+        <span class="prompt-symbol">&gt;</span> Sintonizando frequência... Canal de divulgação científica detectado.
+      </p>
+
+      <div class="broadcast-card">
+        <div class="radio-ui">
+          <div class="radio-header">
+            <span class="radio-freq">FM 98.7</span>
+            <span class="radio-status">● ON AIR</span>
+          </div>
+          <div class="spectrogram" id="spectrogram" aria-label="Visualização de espectrograma de áudio">
+            <div class="spec-bar" style="--i:0"></div>
+            <div class="spec-bar" style="--i:1"></div>
+            <div class="spec-bar" style="--i:2"></div>
+            <div class="spec-bar" style="--i:3"></div>
+            <div class="spec-bar" style="--i:4"></div>
+            <div class="spec-bar" style="--i:5"></div>
+            <div class="spec-bar" style="--i:6"></div>
+            <div class="spec-bar" style="--i:7"></div>
+            <div class="spec-bar" style="--i:8"></div>
+            <div class="spec-bar" style="--i:9"></div>
+            <div class="spec-bar" style="--i:10"></div>
+            <div class="spec-bar" style="--i:11"></div>
+            <div class="spec-bar" style="--i:12"></div>
+            <div class="spec-bar" style="--i:13"></div>
+            <div class="spec-bar" style="--i:14"></div>
+            <div class="spec-bar" style="--i:15"></div>
+            <div class="spec-bar" style="--i:16"></div>
+            <div class="spec-bar" style="--i:17"></div>
+            <div class="spec-bar" style="--i:18"></div>
+            <div class="spec-bar" style="--i:19"></div>
+          </div>
+          <div class="radio-dial">
+            <span class="dial-mark">|</span><span class="dial-mark">|</span><span class="dial-mark active">▲</span><span class="dial-mark">|</span><span class="dial-mark">|</span>
+          </div>
+        </div>
+        <div class="broadcast-info">
+          <h3 class="card-title">Conexão UFMT</h3>
+          <p class="card-role">Coordenador Geral & Âncora (Host) — Podcast de Divulgação Científica</p>
+          <p class="card-desc">
+            Podcast universitário de divulgação científica com entrevistas em estúdio, análises técnicas e coberturas ao vivo de eventos de tecnologia e ciência. Comunicação acessível levando conhecimento acadêmico para além dos muros da universidade.
+          </p>
+          <div class="broadcast-capabilities">
+            <span class="capability"><span class="cap-icon">◉</span> Entrevistas em Estúdio</span>
+            <span class="capability"><span class="cap-icon">◉</span> Cobertura Ao Vivo</span>
+            <span class="capability"><span class="cap-icon">◉</span> Divulgação Científica</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── LIDERANÇA — MISSÕES ─── -->
+    <section id="leadership" class="section leadership-section">
+      <h2 class="section-title">
+        <span class="section-prefix">[04]</span> MISSÕES_DE_LIDERANÇA/
+      </h2>
+      <div class="leadership-grid">
+
+        <div class="leadership-card">
+          <div class="leadership-icon">★</div>
+          <h3>Presidente do Diretório Acadêmico</h3>
+          <p class="leadership-org">DACA — UFMT</p>
+          <p class="leadership-desc">
+            Liderança do Diretório Acadêmico do curso de Engenharia de Controle e Automação. Representação estudantil, organização de eventos e defesa dos interesses acadêmicos.
+          </p>
+        </div>
+
+        <div class="leadership-card">
+          <div class="leadership-icon">◆</div>
+          <h3>Representante no Conselho de Ensino</h3>
+          <p class="leadership-org">CONSEPE — UFMT</p>
+          <p class="leadership-desc">
+            Atuação como representante discente no Conselho de Ensino, Pesquisa e Extensão, participando de decisões estratégicas sobre políticas educacionais e curriculares.
+          </p>
+        </div>
+
+        <div class="leadership-card">
+          <div class="leadership-icon">⚙</div>
+          <h3>Tutor Técnico Convidado</h3>
+          <p class="leadership-org">UEPB — Zootecnia</p>
+          <p class="leadership-desc">
+            Mentoria no desenvolvimento de fluxo de dados para aplicativo de gestão agropecuária, orientando alunos de Zootecnia na integração de tecnologia com manejo animal.
+          </p>
+        </div>
+
+        <div class="leadership-card">
+          <div class="leadership-icon">▶</div>
+          <h3>Organizador & Instrutor</h3>
+          <p class="leadership-org">Crea-Jr MT — Curso de Programação</p>
+          <p class="leadership-desc">
+            Estruturação e condução de curso imersivo de programação (16h) para estudantes de engenharia, em parceria com o Crea-Jr MT. Ensino prático de lógica, algoritmos e desenvolvimento.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── RODAPÉ / CONTATO ─── -->
+    <footer id="contact" class="footer-section">
+      <div class="footer-inner">
+        <h2 class="section-title">
+          <span class="section-prefix">[05]</span> UPLINK_DE_CONTATO/
+        </h2>
+        <p class="footer-desc">
+          <span class="prompt-symbol">&gt;</span> Canais de comunicação disponíveis. Selecione um endpoint.
+        </p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/guilherme-emanuel-ferreira-ferraz/" target="_blank" rel="noopener noreferrer" class="glitch-link" data-text="LinkedIn">
+            <span>[</span> LinkedIn <span>]</span>
+          </a>
+          <a href="https://github.com/JUSTMAZZO" target="_blank" rel="noopener noreferrer" class="glitch-link" data-text="GitHub">
+            <span>[</span> GitHub <span>]</span>
+          </a>
+          <a href="https://www.instagram.com/guilherme_eff/" target="_blank" rel="noopener noreferrer" class="glitch-link" data-text="Instagram">
+            <span>[</span> Instagram <span>]</span>
+          </a>
+        </div>
+        <a href="https://wa.me/5566992400110" target="_blank" rel="noopener noreferrer" class="contact-btn" id="contact-btn">
+          <span class="btn-icon">▶</span> INICIAR_CONTATO.exe
+        </a>
+        <div class="footer-copyright">
+          <p>© 2026 GEFF SYSTEMS — Todos os direitos reservados</p>
+          <p class="footer-version">BUILD v4.7.2 // KERNEL STABLE // UPTIME: ∞</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ╔══════════════════════════════════════════════╗
+       ║  DYNAMIC CURSOR SHADOW (follows mouse)       ║
+       ╚══════════════════════════════════════════════╝ -->
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
